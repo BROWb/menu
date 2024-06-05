@@ -72,7 +72,16 @@ header .navbar ul li:hover > ul{
 
 
 
+#menu-bar{
+    display: none;
+}
 
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
 
 
 @media(max-width:991px){
@@ -81,5 +90,32 @@ header .navbar ul li:hover > ul{
         padding: 20px;
     }
 
+    header label{
+        display: initial;
+    }
 
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right:0;
+        background: #ffffff;
+        border-top: 1px solid rgba(0,0,0,.1,);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
 }
